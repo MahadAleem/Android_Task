@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="4.4"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <include
+        layout="@layout/toolbar_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:background="#D8E0E3"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:checked="false"
+                android:text="@string/by_name" />
+
+            <RadioButton
+                android:id="@+id/radio_alphabet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/by_first_alphabet" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_borders"
+            >
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:queryHint="Margarita"
+        android:textColor="@color/black"
+        android:background="@null"
+        />
+    </LinearLayout>
+</LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recycle_view_home"
+android:layout_height="0dp"
+android:layout_weight="2.8"
+android:layout_width="match_parent"
+android:padding="5dp" />
+
+
+    </LinearLayout>
